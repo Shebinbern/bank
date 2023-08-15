@@ -5,9 +5,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>HEY WELCOME</h1>
-<h2>Hello
-<p>EBIN SHEBIN</p>
-
+	<h1>HEY WELCOME</h1>
+	<h2>
+		Hello
+		<p>EBIN SHEBIN</p>
+		<form th:name="bankName" th:action="@{/savebank}" th:object="${bankDetails}" method="post">
+		
+			 <input type="text" id="exampleInputEmail1" th:field="*{bankName}"
+				placeholder="Enter bankName"><br> 
+				
+			<input type="text"
+				id="exampleInputEmail1" th:field="*{bankCode}" placeholder="Enter bankCode"><br>
+				
+			<input type="text" id="exampleInputEmail1" th:field="*{ifscCode}"
+				placeholder="Enter ifscCode"><br>
+				
+			 <input type="text"
+				id="exampleInputEmail1" th:field="*{branchAddress}" placeholder="Enter branchAddress"><br>
+				
+			<button type="submit">save</button>
+		</form>
 </body>
 </html>
